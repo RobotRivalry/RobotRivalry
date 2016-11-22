@@ -6,10 +6,10 @@ class Trivia extends Component {
     return (
       <div id="question">Question </div>
 
-      <div class="choice-one">Choice 1</div>
-      <div class="choice-two">Choice 2</div>
-      <div class="choice-three">Choice 3</div>
-      <div class="choice-four">Choice 4</div>
+      <div className="choice-one">Choice 1</div>
+      <div className="choice-two">Choice 2</div>
+      <div className="choice-three">Choice 3</div>
+      <div className="choice-four">Choice 4</div>
       );
   }
 }
