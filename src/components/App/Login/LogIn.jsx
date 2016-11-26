@@ -15,7 +15,7 @@ class LogIn extends Component {
           <div className='hOne'>
             <h1>LOG IN</h1>
           </div>
-
+          <br/>
           <div className='inputContainer'>
             <input className='user'
             type="text"
@@ -30,7 +30,8 @@ class LogIn extends Component {
             />
             <br/>
             <button> Log In </button>
-            <br/>
+
+            <p className="or">-or-</p>
             <a href="./#/signup">Sign Up</a>
 
           </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import style from './SignUp.css';
+import style from './SignUp.css';
 
 export default class Signup extends Component {
 
@@ -121,81 +121,96 @@ export default class Signup extends Component {
       <div id="container">
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
       <div className="formBox">
-        <h1 className="signup">SIGNUP</h1>
 
-        <input
-          className="user"
-          type="text"
-          placeholder="Create Username"
-          value={this.props.userFormUsername}
-          onChange={event => this.updateFormUsername(event)}
-        />
-        <br/>
-        <input
-          className="pass"
-          type="text"
-          placeholder="Create Password"
-          value={this.props.userFormPassword}
-          onChange={event => this.updateFormPassword(event)}
-        />
-        <br/>
-        <input
-          className="first"
-          type="text"
-          placeholder="Enter First Name"
-          value={this.props.userFormFirstName}
-          onChange={event => this.updateFormFirstName(event)}
-        />
-        <br/>
-        <input
-          className="last"
-          type="text"
-          placeholder="Enter Last Name"
-          value={this.props.userFormLastName}
-          onChange={event => this.updateFormLastName(event)}
-        />
-        <br/>
-        <input
-          className="age"
-          type="text"
-          placeholder="Enter Age"
-          value={this.props.userFormAge}
-          onChange={event => this.updateFormAge(event)}
-        />
-        <br/>
-        <input
-          className="gender"
-          type="text"
-          placeholder="Select Gender"
-          value={this.props.userFormGender}
-          onChange={event => this.updateFormGender(event)}
-        />
-        <br/>
-        <input
-          className="zodiac"
-          type="text"
-          placeholder="Select Zodiac Sign"
-          value={this.props.userFormZodiac}
-          onChange={event => this.updateFormZodiac(event)}
-        />
-        <br/>
-        <input
-          className="state"
-          type="text"
-          placeholder="Enter State"
-          value={this.props.userFormState}
-          onChange={event => this.updateFormState(event)}
-        />
-        <br/>
-        <input
-          className="email"
-          type="text"
-          placeholder="Enter Email"
-          value={this.props.userFormEmail}
-          onChange={event => this.updateFormEmail(event)}
-        />
-        <br/>
-        <a href="./#/login"><button onClick={() => this.handleFormSubmit()}> Sign up </button></a>
+
+          <div className='hOne'>
+            <h1>SIGN UP</h1>
+          </div>
+          
+        <div className="signup-inputContainer">
+          <input
+            className="user"
+            type="text"
+            placeholder="Create Username"
+            value={this.props.userFormUsername}
+            onChange={this.props.updateFormUsername}
+          />
+          <br/>
+          <input
+            className="pass"
+            type="text"
+            placeholder="Create Password"
+            value={this.props.userFormPassword}
+            onChange={this.props.updateFormPassword}
+          />
+          <br/>
+          <input
+            className="first"
+            type="text"
+            placeholder="First Name"
+            value={this.props.userFormFirstName}
+            onChange={this.props.updateFormFirstName}
+          />
+          <br/>
+          <input
+            className="last"
+            type="text"
+            placeholder="Last Name"
+            value={this.props.userFormLastName}
+            onChange={this.props.updateFormLastName}
+          />
+          <br/>
+          <input
+            className="age"
+            type="text"
+            placeholder="Age"
+            value={this.props.userFormAge}
+            onChange={this.props.updateFormAge}
+          />
+          <br/>
+          <input
+            className="gender"
+            type="text"
+            placeholder="Gender"
+            value={this.props.userFormGender}
+            onChange={this.props.updateFormGender}
+          />
+          <br/>
+          <input
+            className="zodiac"
+            type="text"
+            placeholder="Zodiac Sign"
+            value={this.props.userFormZodiac}
+            onChange={this.props.updateFormZodiac}
+          />
+          <br/>
+          <input
+            className="state"
+            type="text"
+            placeholder="State"
+            value={this.props.userFormState}
+            onChange={this.props.updateFormState}
+          />
+          <br/>
+          <input
+            className="email"
+            type="text"
+            placeholder="Email"
+            value={this.props.userFormEmail}
+            onChange={this.props.updateFormEmail}
+          />
+          <br/>
+          <input
+            className="other-email"
+            type="text"
+            placeholder="Other Email"
+            value={this.props.userFormEmail}
+            onChange={this.props.updateFormEmail}
+          />
+          <br/>
+          <button onClick={this.props.handleFormSubmit}>Sign Up</button>
+
+        </div>
 
       </div>
       </div>

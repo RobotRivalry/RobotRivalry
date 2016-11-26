@@ -10,6 +10,8 @@ import Question from './Game/Question/Question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
 import Home from './Home.jsx'
+import Nav from './Nav.jsx'
+// import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 
 
@@ -218,7 +220,7 @@ class App extends Component {
       counter: this.state.counter + 1,
     })
     this.getOneQuestion();
-}
+  }
 
 
     nextQuestionB() {
@@ -260,7 +262,6 @@ class App extends Component {
     this.getOneQuestion();
   }
 
-
 //added categories
 
   // catMisc(){
@@ -297,6 +298,7 @@ class App extends Component {
   // catAnimals(){
   //   this.setState({category: 27})
   // }
+
 
    // <SignUp
    //        userFormUsername={this.state.userFormUsername}
@@ -336,55 +338,21 @@ class App extends Component {
    //      />
 
 
+
   render(){
     return (
       <div id="app-container">
 
-        <h1>hey</h1>
+        <Nav />
 
-        <SignUp
-          userFormUsername={this.state.userFormUsername}
-          userFormPassword={this.state.userFormPassword}
-          userFormFirstName={this.state.userFormFirstName}
-          userFormLastName={this.state.userFormLastName}
-          userFormAge={this.state.userFormAge}
-          userFormGender={this.state.userFormGender}
-          userFormZodiac={this.state.userFormZodiac}
-          userFormState={this.state.userFormState}
-          userFormEmail={this.state.userFormEmail}
-          updateFormUsername={event => this.updateFormUsername(event)}
-          updateFormPassword={event => this.updateFormPassword(event)}
-          updateFormFirstName={event => this.updateFormFirstName(event)}
-          updateFormLastName={event => this.updateFormLastName(event)}
-          updateFormAge={event => this.updateFormAge(event)}
-          updateFormGender={event => this.updateFormGender(event)}
-          updateFormZodiac={event => this.updateFormZodiac(event)}
-          updateFormState={event => this.updateFormState(event)}
-          updateFormEmail={event => this.updateFormEmail(event)}
-          handleFormSubmit={() => this.handleFormSubmit()}
-        />
+      
 
-        <GameState
-          questions={this.state.questions}
-          getQuestions={event => this.getQuestions(event)}
-          getOneQuestion={event => this.getOneQuestion(event)}
-          question={this.state.currentQuestion}
-          category={this.state.category}
-          difficulty={this.state.difficulty}
-          correct_answer={this.state.correct_answer}
-          answerA={this.state.answerA}
-          answerB={this.state.answerB}
-          answerC={this.state.answerC}
-          answerD={this.state.answerD}
-          nextQuestionA={event => this.nextQuestionA(event)}
-          nextQuestionB={event => this.nextQuestionB(event)}
-          nextQuestionC={event => this.nextQuestionC(event)}
-          nextQuestionD={event => this.nextQuestionD(event)}
-          submitQuestion={event => this.submitQuestion(event)}
-        />
+    
+
 
         {this.props.children}
-      </div>
+
+    </div>
     );
   }
 }

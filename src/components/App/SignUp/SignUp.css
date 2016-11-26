@@ -1,36 +1,59 @@
 body {
-	background-color: blue;
+	background-color: #1b1c1e;
 	background-image: url(futurama_bg.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
+/*	background-size: cover;*/
 	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
-	background-size: 400% 400%;
+	background-size: 200% 200%;
 	font-family: 'Oswald', sans-serif;
+	/*overflow: scroll;*/
+	/*what is making page static?*/
+	background-attachment: initial;
 }
 
 
 #container {
+
 }
 
 .formBox {
 	background-color: rgba(27,28,30,0.5);
 	align-self: center;
-	width: 500px;
-	height: 700px;
+	width: 600px;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
+	/*flex-wrap: wrap;*/
 	align-items: center;
-	margin: 100px auto;
+	margin: 60px auto;
 	border-radius: 8px;
 	border: 1px solid #444444;
+	/*overflow: scroll;*/
+	animation: shwoop .3s ease-in-out;
+  	transform: scaleY(1);
+}
+@keyframes shwoop {
+  0% {
+    top: (0px);
+    transform: scaleY(0);
+  }
+  100% {
+    bottom: (100px);
+    transform: scaleY(1);
+  }
 }
 
-/*.inputContainer {
+
+.signup-inputContainer {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 30px;
-}*/
+	padding: 0px;
+	height: 800px;
+	width: 600px;
+}
 
 .user {
 	width: 230px;
@@ -104,13 +127,13 @@ body {
 	margin: 10px;
 	letter-spacing: 2px;
 	font-size: 16px;
-	margin: 5px;
 	font-weight: lighter;
+	margin: 5px;
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;
 }
 .first:hover {
 	color: #FFFFFF;
@@ -173,8 +196,8 @@ body {
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
 }
 .age:hover {
 	color: #FFFFFF;
@@ -204,8 +227,8 @@ body {
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
 }
 .gender:hover {
 	color: #FFFFFF;
@@ -221,7 +244,7 @@ body {
 	letter-spacing: 5px;
 }
 
-.zodiac .state .email{
+.zodiac {
 	width: 230px;
 	height: 30px;
 	border: 1px solid white;
@@ -235,22 +258,118 @@ body {
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
 }
-.zodiac .state .email:hover {
-	color: #FFFFFF;
+.zodiac:hover {
+	color: #FFFFFF;	
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
               	color 0.5s ease-out,
               	letter-spacing 0.2s ease-out;
 }
-.zodiac, .state, .email:focus {
+.zodiac:focus {
 	background-color: rgba(255,255,255,0.3);
 	color: #FFFFFF;
 	letter-spacing: 5px;
 }
+
+.state {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;	
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
+}
+.state:hover {
+	color: #FFFFFF;	
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.state:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+.email {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;	
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
+}
+.email:hover {
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.email:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+
+.other-email {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;	
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
+}
+.other-email:hover {
+	color: #FFFFFF;	
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.other-email:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+
+
 
 button {
 	width: 100px;
@@ -264,8 +383,11 @@ button {
 	letter-spacing: 0px;
 	font-size: 16px;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	background: transparent;
 	border: 1px solid white;
+
+	align-self: center;
 
 	transition: background-color 0.3s ease-out,
           		color 0.2s ease-out,
@@ -285,7 +407,8 @@ button:hover {
               	text-transform 0.1s ease-out;
 }
 
-.signup h1 {
+.hOne h1 {
+	display: block;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 70px;
 	align-self: flex-start;
